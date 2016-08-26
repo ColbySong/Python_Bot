@@ -43,6 +43,26 @@ class Cord:
 
     delivary_norm = (1243, 743)
 
+def clear_tables():
+    mousePos((246, 530))
+    leftClick()
+
+    mousePos((503, 537))
+    leftClick()
+
+    mousePos((739, 525))
+    leftClick()
+
+    mousePos((995, 532))
+    leftClick()
+
+    mousePos((1257, 534))
+    leftClick()
+
+    mousePos((1504, 529))
+    leftClick()
+    time.sleep(2)
+
 def leftClick():
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0)
     time.sleep(0.1)
