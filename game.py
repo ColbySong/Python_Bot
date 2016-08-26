@@ -3,12 +3,8 @@ __author__ = 'Colby'
 # get_cords for gettings game button x and y positions
 
 import time
-import win32api
 import gameCoordinates
 import mouseEvents
-
-x_pad = 361
-y_pad = 344
 
 """
 Recipes:
@@ -86,12 +82,6 @@ def clearTables():
     mouseEvents.mousePos((1475, 527))
     mouseEvents.leftClick()
     time.sleep(2)
-
-def getCords():
-    x, y = win32api.GetCursorPos()
-    x = x - x_pad
-    y = y - y_pad
-    print(x, y)
 
 def startGame():
     # first play button
