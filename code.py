@@ -90,7 +90,7 @@ def makeFood(food):
         foldMat()
         time.sleep(2)
 
-def clear_tables():
+def clearTables():
     mousePos((204, 500))
     leftClick()
 
@@ -129,7 +129,7 @@ def leftUp():
 def mousePos(cord):
     win32api.SetCursorPos((x_pad + cord[0], y_pad + cord[1]))
 
-def get_cords():
+def getCords():
     x, y = win32api.GetCursorPos()
     x = x - x_pad
     y = y - y_pad
