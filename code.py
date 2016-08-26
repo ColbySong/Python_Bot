@@ -8,6 +8,16 @@ import win32api, win32con
 x_pad = 361
 y_pad = 344
 
+"""
+Plate cords:
+(246, 530)
+(503, 537)
+(739, 525)
+(995, 532)
+(1257, 534)
+(1504, 529)
+"""
+
 # import game button coordinates
 class Cord:
 
