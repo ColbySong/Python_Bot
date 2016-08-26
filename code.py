@@ -44,22 +44,22 @@ class Cord:
     delivary_norm = (1243, 743)
 
 def clear_tables():
-    mousePos((246, 530))
+    mousePos((204, 500))
     leftClick()
 
-    mousePos((503, 537))
+    mousePos((458, 516))
     leftClick()
 
-    mousePos((739, 525))
+    mousePos((710, 519))
     leftClick()
 
-    mousePos((995, 532))
+    mousePos((968, 518))
     leftClick()
 
-    mousePos((1257, 534))
+    mousePos((1209, 528))
     leftClick()
 
-    mousePos((1504, 529))
+    mousePos((1475, 527))
     leftClick()
     time.sleep(2)
 
