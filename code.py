@@ -8,6 +8,16 @@ import win32api, win32con
 x_pad = 361
 y_pad = 344
 
+# import game button coordinates
+class Cord:
+
+    f_shrimp = (94, 851)
+    f_rice = (222, 839)
+    f_nori = (125, 972)
+    f_roe = (236, 984)
+    f_salmon = (90, 1110)
+    f_unagi = (229, 1116)
+
 def leftClick():
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0)
     time.sleep(0.1)
