@@ -8,16 +8,6 @@ import win32api, win32con
 x_pad = 361
 y_pad = 344
 
-"""
-Plate cords:
-(246, 530)
-(503, 537)
-(739, 525)
-(995, 532)
-(1257, 534)
-(1504, 529)
-"""
-
 # import game button coordinates
 class Cord:
 
@@ -42,6 +32,63 @@ class Cord:
     buy_rice = (1379, 734)
 
     delivary_norm = (1243, 743)
+
+"""
+Recipes:
+onigiri: 2 rice, 1 nori
+caliroll: 1 rice, 1 nori, 1 roe
+gunkan: 1 roce, 1 nori, 2 roe
+"""
+def foldMat():
+    mousePos((557, 839))
+    leftClick()
+    time.sleep(0.5)
+
+def makeFood(food):
+    if food == 'caliroll':
+        print("making caliroll")
+        mousePos(Cord.f_rice)
+        leftClick()
+        time.sleep(0.5)
+        mousePos(Cord.f_nori)
+        leftClick()
+        time.sleep(0.5)
+        mousePos(Cord.f_roe)
+        leftClick()
+        time.sleep(0.5)
+        foldMat()
+        time.sleep(2)
+
+    elif food == 'onigiri':
+        print("making onigiri")
+        mousePos(Cord.f_rice)
+        leftClick()
+        time.sleep(0.5)
+        mousePos(Cord.f_rice)
+        leftClick()
+        time.sleep(0.5)
+        mousePos(Cord.f_nori)
+        leftClick()
+        time.sleep(0.5)
+        foldMat()
+        time.sleep(2)
+
+    elif food == 'gunkan':
+        print("making gunkan")
+        mousePos(Cord.f_rice)
+        leftClick()
+        time.sleep(0.5)
+        mousePos(Cord.f_nori)
+        leftClick()
+        time.sleep(0.5)
+        mousePos(Cord.f_roe)
+        leftClick()
+        time.sleep(0.5)
+        mousePos(Cord.f_roe)
+        leftClick()
+        time.sleep(0.5)
+        foldMat()
+        time.sleep(2)
 
 def clear_tables():
     mousePos((204, 500))
