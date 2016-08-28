@@ -87,10 +87,10 @@ def clearTables():
     mouseEvents.leftClick()
     time.sleep(2)
 
-def getCords():
+def getCoordinates():
     x, y = win32api.GetCursorPos()
-    x = x - x_pad
-    y = y - y_pad
+    x -= x_pad
+    y -= y_pad
     print(x, y)
 
 def startGame():
