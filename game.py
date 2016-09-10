@@ -99,6 +99,7 @@ def clearTables():
     mousePos((1475, 527))
     leftClick()
     time.sleep(2)
+
 ################################################################
 def buyFood(food):
     if food == 'rice':
