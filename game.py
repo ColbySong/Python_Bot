@@ -14,6 +14,12 @@ onigiri: 2 rice, 1 nori
 caliroll: 1 rice, 1 nori, 1 roe
 gunkan: 1 roce, 1 nori, 2 roe
 """
+# starting ingredient numbers
+foodStock = {
+    'rice': 10,
+    'nori': 10,
+    'roe': 10
+}
 ####################################
 def foldMat():
     mousePos((557, 839))
@@ -23,6 +29,9 @@ def foldMat():
 def makeFood(food):
     if food == 'caliroll':
         print("making calirol")
+        foodStock['rice'] -= 1;
+        foodStock['nori'] -= 1;
+        foodStock['roe'] -= 1;
         mousePos(Cord.f_rice)
         leftClick()
         time.sleep(0.5)
@@ -37,6 +46,8 @@ def makeFood(food):
 
     elif food == 'onigiri':
         print("making onigiri")
+        foodStock['rice'] -= 2
+        foodStock['nori'] -= 1
         mousePos(Cord.f_rice)
         leftClick()
         time.sleep(0.5)
@@ -51,6 +62,9 @@ def makeFood(food):
 
     elif food == 'gunkan':
         print("making gunkan")
+        foodStock['rice'] -= 1
+        foodStock['nori'] -= 1
+        foodStock['roe'] -= 2
         mousePos(Cord.f_rice)
         leftClick()
         time.sleep(0.5)
@@ -103,6 +117,7 @@ def buyFood(food):
             leftClick()
             mousePos(Cord.delivery_norm)
             print('BUYING RICE')
+            foodStock['rice'] += 10
             time.sleep(.5)
             leftClick()
             time.sleep(3)
@@ -128,6 +143,7 @@ def buyFood(food):
             time.sleep(.5)
             leftClick()
             mousePos(Cord.delivery_norm)
+            foodStock['nori'] += 10
             time.sleep(.5)
             leftClick()
             time.sleep(3)
@@ -153,6 +169,7 @@ def buyFood(food):
             time.sleep(.5)
             leftClick()
             mousePos(Cord.delivery_norm)
+            foodStock['roe'] += 10
             time.sleep(.5)
             leftClick()
             time.sleep(3)
