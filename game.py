@@ -5,6 +5,9 @@ __author__ = 'Colby'
 import time
 import gameCoordinates
 import mouseEvents
+import ImageOps  # used for grayscaling
+from numpy import *
+
 
 """
 Recipes:
