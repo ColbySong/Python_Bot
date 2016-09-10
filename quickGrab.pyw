@@ -10,7 +10,7 @@ y_pad = 344
 def screenGrab():
     box = (x_pad+1, y_pad+1, x_pad+1601, y_pad+1201)
     im = ImageGrab.grab(box)
-    # im.save(os.getcwd() + '\\full_snap__' + str(int(time.time())) + '.png', 'PNG')
+    im.save(os.getcwd() + '\\full_snap__' + str(int(time.time())) + '.png', 'PNG')
     return im
 
 def main():
