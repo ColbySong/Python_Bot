@@ -180,6 +180,12 @@ def buyFood(food):
             time.sleep(2)
             buyFood(food)
 ####################################################################
+def checkFood():
+    for i, j in foodStock.items():
+        if j <= 4:
+            print('%s is running low, please order' % i)
+            buyFood(i)
+####################################################################
 def startGame():
     # first play button
     mousePos((883, 524))
