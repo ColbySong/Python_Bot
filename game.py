@@ -4,9 +4,6 @@ __author__ = 'Colby'
 from gameCoordinates import *
 from mouseEvents import *
 from imageTools import *
-import ImageOps  # used for grayscaling
-from numpy import *
-
 
 """
 Recipes:
@@ -230,8 +227,90 @@ def startGame():
     leftClick()
     time.sleep(2)
 
+def playGame():
+    checkFood()
+    orderOne = grabOrderOne() # this is a grayscale sum value
+    if orderOne != blankSeats['seatOne']:
+        if sushiValue.has_key(orderOne):
+            sushiOrder = sushiValue[orderOne]
+            print('Table One is ordering %s' % sushiOrder)
+            makeFood(sushiOrder)
+        else:
+            print('Sushi order not found')
+    else:
+        print('No one is at Table One')
+
+    clearTables()
+    checkFood()
+    orderTwo = grabOrderTwo() # this is a grayscale sum value
+    if orderTwo != blankSeats['seatTwo']:
+        if sushiValue.has_key(orderTwo):
+            sushiOrder = sushiValue[orderTwo]
+            print('Table Two is ordering %s' % sushiOrder)
+            makeFood(sushiOrder)
+        else:
+            print('Sushi order not found')
+    else:
+        print('No one is at Table Two')
+
+    clearTables()
+    checkFood()
+    orderThree = grabOrderOne() # this is a grayscale sum value
+    if orderThree != blankSeats['seatThree']:
+        if sushiValue.has_key(orderThree):
+            sushiOrder = sushiValue[orderThree]
+            print('Table Three is ordering %s' % sushiOrder)
+            makeFood(sushiOrder)
+        else:
+            print('Sushi order not found')
+    else:
+        print('No one is at Table Three')
+
+    clearTables()
+    checkFood()
+    orderFour = grabOrderFour() # this is a grayscale sum value
+    if orderFour != blankSeats['seatFour']:
+        if sushiValue.has_key(orderFour):
+            sushiOrder = sushiValue[orderFour]
+            print('Table Four is ordering %s' % sushiOrder)
+            makeFood(sushiOrder)
+        else:
+            print('Sushi order not found')
+    else:
+        print('No one is at Table Four')
+
+    clearTables()
+    checkFood()
+    orderFive = grabOrderFive() # this is a grayscale sum value
+    if orderFive != blankSeats['seatFive']:
+        if sushiValue.has_key(orderFive):
+            sushiOrder = sushiValue[orderFive]
+            print('Table Five is ordering %s' % sushiOrder)
+            makeFood(sushiOrder)
+        else:
+            print('Sushi order not found')
+    else:
+        print('No one is at Table Five')
+
+    clearTables()
+    checkFood()
+    orderSix = grabOrderSix() # this is a grayscale sum value
+    if orderSix != blankSeats['seatSix']:
+        if sushiValue.has_key(orderSix):
+            sushiOrder = sushiValue[orderSix]
+            print('Table Five is ordering %s' % sushiOrder)
+            makeFood(sushiOrder)
+        else:
+            print('Sushi order not found')
+    else:
+        print('No one is at Table Six')
+
+    clearTables()
+
 def main():
-    pass
+    startGame()
+    while True:
+        playGame()
 
 # # Python convention to check if script is top level (only executes if ran by itself)
 # if __name__ == '__main__':

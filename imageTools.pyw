@@ -23,7 +23,7 @@ def grabOrderOne():
     a = array(im.getcolors())
     a = a.sum()
     print a
-    im.save(os.getcwd() + '\\order_one__' + str(int(time.time())) + '.png', 'PNG')
+    # im.save(os.getcwd() + '\\order_one__' + str(int(time.time())) + '.png', 'PNG')
     return a
 
 def grabOrderTwo():
@@ -32,7 +32,7 @@ def grabOrderTwo():
     a = array(im.getcolors())
     a = a.sum()
     print a
-    im.save(os.getcwd() + '\\order_two__' + str(int(time.time())) + '.png', 'PNG')
+    # im.save(os.getcwd() + '\\order_two__' + str(int(time.time())) + '.png', 'PNG')
     return a
 
 def grabOrderThree():
@@ -41,7 +41,7 @@ def grabOrderThree():
     a = array(im.getcolors())
     a = a.sum()
     print a
-    im.save(os.getcwd() + '\\order_three__' + str(int(time.time())) + '.png', 'PNG')
+    # im.save(os.getcwd() + '\\order_three__' + str(int(time.time())) + '.png', 'PNG')
     return a
 
 def grabOrderFour():
@@ -50,7 +50,7 @@ def grabOrderFour():
     a = array(im.getcolors())
     a = a.sum()
     print a
-    im.save(os.getcwd() + '\\order_four__' + str(int(time.time())) + '.png', 'PNG')
+    # im.save(os.getcwd() + '\\order_four__' + str(int(time.time())) + '.png', 'PNG')
     return a
 
 def grabOrderFive():
@@ -59,7 +59,7 @@ def grabOrderFive():
     a = array(im.getcolors())
     a = a.sum()
     print a
-    im.save(os.getcwd() + '\\order_five__' + str(int(time.time())) + '.png', 'PNG')
+    # im.save(os.getcwd() + '\\order_five__' + str(int(time.time())) + '.png', 'PNG')
     return a
 
 def grabOrderSix():
@@ -68,7 +68,7 @@ def grabOrderSix():
     a = array(im.getcolors())
     a = a.sum()
     print a
-    im.save(os.getcwd() + '\\order_six__' + str(int(time.time())) + '.png', 'PNG')
+    # im.save(os.getcwd() + '\\order_six__' + str(int(time.time())) + '.png', 'PNG')
     return a
 
 def getAllOrders():
