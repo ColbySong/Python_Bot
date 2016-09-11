@@ -6,19 +6,19 @@ from numpy import *
 import os
 import time
 
-x_pad = 361
+x_pad = 363
 y_pad = 344
 
 # grabs the game screen, used for getting image coordinates
 def screenGrab():
     box = (x_pad+1, y_pad+1, x_pad+1601, y_pad+1201)
     im = ImageGrab.grab(box)
-    # im.save(os.getcwd() + '\\full_snap__' + str(int(time.time())) + '.png', 'PNG')
+    im.save(os.getcwd() + '\\full_snap__' + str(int(time.time())) + '.png', 'PNG')
     return im
 
 # grab customer order images, used for determining sushi type
 def grabOrderOne():
-    box = (66,154,66+63,154+16)
+    box = (x_pad+66,y_pad+154,x_pad+66+150,y_pad+154+30)
     im = ImageOps.grayscale(ImageGrab.grab(box))
     a = array(im.getcolors())
     a = a.sum()
@@ -27,7 +27,7 @@ def grabOrderOne():
     return a
 
 def grabOrderTwo():
-    box = (319,154,319+63,154+16)
+    box = (x_pad+319, y_pad+154, x_pad+319+150, y_pad+154+30)
     im = ImageOps.grayscale(ImageGrab.grab(box))
     a = array(im.getcolors())
     a = a.sum()
@@ -36,7 +36,7 @@ def grabOrderTwo():
     return a
 
 def grabOrderThree():
-    box = (571,154,571+63,154+16)
+    box = (x_pad+571, y_pad+154, x_pad+571+150, y_pad+154+30)
     im = ImageOps.grayscale(ImageGrab.grab(box))
     a = array(im.getcolors())
     a = a.sum()
@@ -45,7 +45,7 @@ def grabOrderThree():
     return a
 
 def grabOrderFour():
-    box = (824,154,824+63,154+16)
+    box = (x_pad+824, y_pad+154, x_pad+824+150, y_pad+154+30)
     im = ImageOps.grayscale(ImageGrab.grab(box))
     a = array(im.getcolors())
     a = a.sum()
@@ -54,7 +54,7 @@ def grabOrderFour():
     return a
 
 def grabOrderFive():
-    box = (1076,154,1076+63,154+16)
+    box = (x_pad+1076, y_pad+154, x_pad+1076+150, y_pad+154+30)
     im = ImageOps.grayscale(ImageGrab.grab(box))
     a = array(im.getcolors())
     a = a.sum()
@@ -63,13 +63,21 @@ def grabOrderFive():
     return a
 
 def grabOrderSix():
-    box = (1329,154,1329+63,154+16)
+    box = (x_pad+1329, y_pad+154, x_pad+1329+150, y_pad+154+30)
     im = ImageOps.grayscale(ImageGrab.grab(box))
     a = array(im.getcolors())
     a = a.sum()
     print a
     im.save(os.getcwd() + '\\order_six__' + str(int(time.time())) + '.png', 'PNG')
     return a
+
+def getAllOrders():
+    grabOrderOne()
+    grabOrderTwo()
+    grabOrderThree()
+    grabOrderFour()
+    grabOrderFive()
+    grabOrderSix()
 
 def main():
     screenGrab()

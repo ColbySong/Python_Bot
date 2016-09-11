@@ -20,6 +20,13 @@ foodStock = {
     'nori': 10,
     'roe': 10
 }
+
+# sushi order grayscale sum values
+sushiValue = {
+    7577: 'gunkan',
+    9762: 'onigiri',
+    13109: 'caliroll'
+}
 ####################################
 def foldMat():
     mousePos((557, 839))
