@@ -3,7 +3,7 @@ __author__ = 'Colby'
 # get_cords for gettings game button x and y positions
 from gameCoordinates import *
 from mouseEvents import *
-from quickGrab import *
+from imageTools import *
 import ImageOps  # used for grayscaling
 from numpy import *
 
