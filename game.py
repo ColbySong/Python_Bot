@@ -312,6 +312,6 @@ def main():
     while True:
         playGame()
 
-# # Python convention to check if script is top level (only executes if ran by itself)
-# if __name__ == '__main__':
-#     main()
+# Python convention to check if script is top level (only executes if ran by itself)
+if __name__ == '__main__':
+   main()
