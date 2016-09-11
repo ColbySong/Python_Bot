@@ -27,6 +27,16 @@ sushiValue = {
     9762: 'onigiri',
     13109: 'caliroll'
 }
+
+# blank seats values
+blankSeats = {
+    'seatOne': 15727,
+    'seatTwo': 18607,
+    'seatThree': 23474,
+    'seatFour': 23658,
+    'seatFive': 20130,
+    'seatSix': 17072
+}
 ####################################
 def foldMat():
     mousePos((557, 839))
